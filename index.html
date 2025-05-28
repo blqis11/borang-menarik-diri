@@ -1,0 +1,40 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Portal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Include header -->
+  <div id="header-container"></div>
+
+  <!-- Main Content -->
+  <section class="banner">
+    <h1>Welcome to Student Portal</h1> 
+    <img src="uitm.jpg" alt="UiTM Gate" class="moving-image" />
+
+  </section>
+
+  <!-- Include footer -->
+  <div id="footer-container"></div>
+
+  <script>
+    // Load header
+    fetch('header.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('header-container').innerHTML = data;
+      });
+
+    // Load footer
+    fetch('footer.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('footer-container').innerHTML = data;
+      });
+  </script>
+</body>
+</html>
