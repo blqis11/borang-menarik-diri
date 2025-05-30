@@ -1,4 +1,3 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,27 +7,22 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Include header -->
   <div id="header-container"></div>
 
-  <!-- Main Content -->
   <section class="banner">
     <img src="uitm.jpg" alt="UiTM Gate" class="moving-image" />
 
   </section>
 
-  <!-- Include footer -->
   <div id="footer-container"></div>
 
   <script>
-    // Load header
     fetch('header.html')
       .then(res => res.text())
       .then(data => {
         document.getElementById('header-container').innerHTML = data;
       });
 
-    // Load footer
     fetch('footer.html')
       .then(res => res.text())
       .then(data => {
